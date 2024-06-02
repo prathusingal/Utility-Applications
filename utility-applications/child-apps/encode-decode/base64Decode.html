@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Decoder</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/navbar.css"> 
+    <link rel="stylesheet" href="./css/responsive.css">    
+    <link rel="stylesheet" href="./css/styles.css"> 
+    <script defer src="./js/base64Decode.js" ></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Encoder/Decoder
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="base64Encode.html">Base64 Encoder</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="base64Decode.html">Base64 Decoder</a></li>
+                        
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">Cryptography and Security
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../cryptographic-encryption/md5.html">Md5 Encryption</a></li> 
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../cryptographic-encryption/sh1Encryption.html">Sh1 Encryption</a></li>    
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../cryptographic-encryption/sh256Encryption.html">Sh256 Encryption</a></li>  
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu3" type="button" data-toggle="dropdown">RGB/HEX Converter
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../rgb-hex/RgbToHex.html">RGB To Hex Converter</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../rgb-hex/HexToRgb.html">Hex To RGB Converter</a></li>  
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu4" type="button" data-toggle="dropdown">String Utility Apps
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../string-utility/index.html">String Utility App</a></li>
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu5" type="button" data-toggle="dropdown">Timestamp Converter
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../time-converter/index.html">Epoch Time Converter</a></li>
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu6" type="button" data-toggle="dropdown">IP Address And Language App
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu6">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../ip-checker/index.html">IP Address Checker</a></li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <section class="home" id="home" >
+            <h3 class="title">Base64 Decode</h3>
+            <textarea id="textDecodeInput"  type="text" value="" placeholder="Please enter a text to decode..." ></textarea>
+            
+            <div class="button">
+                <input id="baseDecodeBtn" type="button" value="Decode" class="btn btn-primary btn-lg" />
+                <input id="clearBtn" type="button" value="CLEAR" class="btn btn-danger btn-lg"  />
+            </div>
+            
+        </section>
+        <section class="outputSection" >
+            <h3 class="title">Result</h3>
+            <div class="outputBox">
+                <textarea id="textDecodeOutput"  type="text" value="" disabled ></textarea>
+            </div>
+        </section>
+        <section class="contentSection" >
+            <h3 class="title">What is Base64 Encoding ?</h3>
+            <div class="contentSubSection">
+                <p>
+                    Base64 is a group of similar binary-to-text encoding schemes that represent binary data in
+                    an ASCII string format by translating it into a radix-64 representation. The term Base64 originates from a 
+                    specific MIME content transfer encoding.
+                </p>
+                <p>
+                    Base64 encoding schemes are commonly used when there is a need to encode binary data that needs to be stored and
+                    transferred over media that are designed to deal with ASCII. This is to ensure that the data remain intact without
+                    modification during transport. Base64 is commonly used in a number of applications including email via MIME, and 
+                    storing complex data in XML.
+                </p>
+                <p>
+                    One common application of base64 encoding on the web is to encode binary data  so it can be included in a data: URL.
+                </p>
+                <h4 class="subTitle" >Why 64?</h4>
+                <p>
+                    Because you can generally rely on the same 64 characters being present in many character sets, and you can be reasonably 
+                    confident that your data's going to end up on the other side of the wire uncorrupted.
+                </p>
+            </div>
+        </section>
+
+    </div>
+  
+
+</body>
+</html>
