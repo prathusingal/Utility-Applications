@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sh1 encryption</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/styles.css"> 
+    <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="text/javascript" defer src="./js/sh1.js" ></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Encoder/Decoder
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../encode-decode/base64Encode.html">Base64 Encoder</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../encode-decode/base64Decode.html">Base64 Decoder</a></li>
+                        
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">Cryptography and Security
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="md5.html">Md5 Encryption</a></li> 
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="sh1Encryption.html">Sh1 Encryption</a></li>    
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="sh256Encryption.html">Sh256 Encryption</a></li>  
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu3" type="button" data-toggle="dropdown">RGB/HEX Converter
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../rgb-hex/RgbToHex.html">RGB To Hex Converter</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../rgb-hex/HexToRgb.html">Hex To RGB Converter</a></li>  
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu4" type="button" data-toggle="dropdown">String Utility Apps
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../string-utility/index.html">String Utility App</a></li>
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu5" type="button" data-toggle="dropdown">Timestamp Converter
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../time-converter/index.html">Epoch Time Converter</a></li>
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu6" type="button" data-toggle="dropdown">IP Address And Language App
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu6">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../ip-checker/index.html">IP Address Checker</a></li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="home" id="home" >
+            <h3 class="title">SH1 encryption</h3>
+            <textarea id="sh1TextInput"  type="text" value="" placeholder="Please enter a text to encrypt..." ></textarea>
+            
+            <div class="button">
+                <input id="sh1Button" type="button" value="Encode" class="btn btn-success btn-lg" />
+                <input id="clearBtn" type="button" value="CLEAR" class="btn btn-danger btn-lg"  />
+            </div>
+            
+        </section>
+        <section class="outputSection" >
+            <h3 class="title">Result</h3>
+            <div class="outputBox">
+                <textarea id="textSh1Output"  type="text" value="" disabled ></textarea>
+            </div>
+        </section>
+        <section class="sh1Section" >
+            <h3 class="title">What is SH1 encryption ?</h3>
+            <div class="sh1SubSection">
+                <p>
+                    SHA-1 or Secure Hash Algorithm 1 is a cryptographic hash function which takes an input and produces a 160-bit (20-byte) hash value.
+                     This hash value is known as a message digest. This message digest is usually then rendered as a hexadecimal number which is 40 digits
+                      long. It is a U.S. Federal Information Processing Standard and was designed by the United States National Security Agency.
+                </p>
+               
+                <h4 class="subTitle" >When and why would you use SHA-1 Hash?</h4>
+                <p>
+                    In 2005, SHA-1 was found to no longer be secure enough for ongoing use in high security environments. It was widely used for signing 
+                    of SSL certificates, but is being phased out and will no longer be supported by many browsers by 2017.
+                </p>
+                <p>
+                    SHA-1 is often used as a checksum algorithm. Text or files are fed into the MD5 algorithm and the resulting hash would change
+                     if the file had been changed. This is done to detect malicious tampering, or file corruption.
+                </p>
+                <p>
+                    SHA-1 has also historically been used as a password hashing algorithm. Password hashing algorithms allow a password to be stored,
+                     in a website's database for instance, without having to store the actual password. This makes it more difficult to steal passwords,
+                      and if the hash is taken, the user's password is not necessarily compromised. When using a hashing algorithm for passwords it is
+                       wise to use "salt". With SHA-1, salt is added by concatinating a string unrelated to the password to the user supplied password string.
+                </p>
+            </div>
+        </section>
+    </div>
+       
+
+</body>
+</html>

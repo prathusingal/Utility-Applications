@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex To RGB Converter</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/responsive.css"> 
+    <link rel="stylesheet" href="./css/navbar.css">    
+    <link rel="stylesheet" href="./css/hexToRgb.css"> 
+    <script type="text/javascript" defer="" src="./js/hex-rgb.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Encoder/Decoder
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../encode-decode/base64Encode.html">Base64 Encoder</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../encode-decode/base64Decode.html">Base64 Decoder</a></li>
+                        
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">Cryptography and Security
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../cryptographic-encryption/md5.html">Md5 Encryption</a></li> 
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../cryptographic-encryption/sh1Encryption.html">Sh1 Encryption</a></li>    
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../cryptographic-encryption/sh256Encryption.html">Sh256 Encryption</a></li>  
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu3" type="button" data-toggle="dropdown">RGB/HEX Converter
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="RgbToHex.html">RGB To Hex Converter</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="HexToRgb.html">Hex To RGB Converter</a></li>  
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu4" type="button" data-toggle="dropdown">String Utility Apps
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../string-utility/index.html">String Utility App</a></li>
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu5" type="button" data-toggle="dropdown">Timestamp Converter
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../time-converter/index.html">Epoch Time Converter</a></li>
+                    </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu6" type="button" data-toggle="dropdown">IP Address And Language App
+                    <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu6">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="../ip-checker/index.html">IP Address Checker</a></li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="home" id="home">
+            <h3 class="title">Hex To RGB Converter</h3>
+            <label for="hexColorInput">HEX CODE : # </label><br>
+            <textarea id="hexColorInput" minlength="6" maxlength="6" type="text" value="" placeholder="please enter hex code value"></textarea>
+            
+            <div class="button">
+                <input id="hexToRGBButton" type="button" value="Convert" class="btn btn-success btn-lg">
+                <input id="clearBtn" type="button" value="CLEAR" class="btn btn-danger btn-lg">
+            </div>
+            
+        </section>
+        <section class="outputSection">
+            <h3 class="title">Result</h3>
+            
+            <div class="outputBox">
+                <h4 class="rgbTitle"></h4>
+                <div id="hexToRgbOutput"></div>
+            </div>
+        </section>
+        <section class="rgbHexSection">
+            <h3 class="title">What does this Hex to RGB converter do?</h3>
+            <div class="rgbHexSubSection">
+                <p>
+                    It takes input in the form of a hex color code value and converts that value to a RGB value that can be used 
+                    to specify color in photo editing software. Photo editing software usually represents color in RGB and therefore
+                     if you would like to use the same colors that you use in your html pages in your photo editing software you will
+                      need the RGB values for the hex code. This tool allows you to get those values. 
+                </p>
+               
+                
+            </div>
+        </section>
+    </div>
+       
+
+
+<div></div></body></html>
